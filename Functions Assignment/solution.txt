@@ -1,0 +1,100 @@
+### Q1. Create an arrow function called square that takes a number as an argument and returns its square. Use the arrow function to calculate the square of a given number and display the result.
+
+```javascript
+
+
+const square = (num) => num * num;
+
+let number = 5;
+console.log(`The square of ${number} is ${square(number)}`);
+```
+
+### Q2. Create a JavaScript function called generateGreeting that takes a name as an argument and returns a personalized greeting message. Use this function to greet three different people.
+
+```javascript
+
+
+function generateGreeting(name) {
+    return `Hello, ${name}! Welcome!`;
+}
+
+console.log(generateGreeting("Alice"));
+console.log(generateGreeting("Bob"));
+console.log(generateGreeting("Charlie"));
+```
+
+### Q3. Create an IIFE (Immediately Invoked Function Expression) that calculates the square of a number and immediately displays the result.
+
+```javascript
+
+
+(function(num) {
+    console.log(`The square of ${num} is ${num * num}`);
+})(4);
+```
+
+### Q4. Write a JavaScript function called calculateTax that takes an income as an argument and returns the amount of tax to be paid. Use a closure to handle different tax rates based on income ranges. Test the function with various incomes.
+
+```javascript
+
+
+function calculateTax(income) {
+    return (function() {
+        if (income <= 10000) {
+            return income * 0.1;
+        } else if (income <= 20000) {
+            return income * 0.2;
+        } else {
+            return income * 0.3;
+        }
+    })();
+}
+
+console.log(calculateTax(8000));  // 800
+console.log(calculateTax(15000)); // 3000
+console.log(calculateTax(25000)); // 7500
+```
+
+### Q5. Write a JavaScript function called factorial that calculates the factorial of a non-negative integer using recursion. Test the function with different inputs.
+
+```javascript
+
+
+function factorial(n) {
+    if (n === 0) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+console.log(factorial(5)); // 120
+console.log(factorial(0)); // 1
+console.log(factorial(7)); // 5040
+```
+
+### Q6. Write a JavaScript function called curry that takes a function as an argument and returns a curried version of that function. The curried function should accept arguments one at a time and return a new function until all arguments are provided. Then, it should execute the original function with all arguments. Test the curry function with a function that adds two numbers.
+
+```javascript
+
+
+function curry(fn) {
+    return function curried(...args) {
+        if (args.length >= fn.length) {
+            return fn.apply(this, args);
+        } else {
+            return function(...nextArgs) {
+                return curried.apply(this, args.concat(nextArgs));
+            };
+        }
+    };
+}
+
+function add(a, b) {
+    return a + b;
+}
+
+const curriedAdd = curry(add);
+console.log(curriedAdd(2)(3)); // 5
+```
+
+Similar code found with 1 license type

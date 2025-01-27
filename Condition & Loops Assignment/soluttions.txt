@@ -1,0 +1,129 @@
+
+
+### Q1. What are conditional statements? Explain conditional statements with syntax and examples.
+
+Conditional statements are used to perform different actions based on different conditions. They allow the execution of certain parts of code based on whether a condition is true or false.
+
+**Syntax:**
+```javascript
+if (condition) {
+  // code to be executed if condition is true
+} else if (anotherCondition) {
+  // code to be executed if anotherCondition is true
+} else {
+  // code to be executed if all conditions are false
+}
+```
+
+**Example:**
+```javascript
+let age = 18;
+
+if (age >= 18) {
+  console.log("You are an adult.");
+} else {
+  console.log("You are a minor.");
+}
+---------------------------------------------------------------------------------
+
+### Q2. Write a program that grades students based on their marks
+
+```javascript
+let marks = 85;
+let grade;
+
+if (marks > 90) {
+  grade = 'A';
+} else if (marks > 70 && marks <= 90) {
+  grade = 'B';
+} else if (marks > 50 && marks <= 70) {
+  grade = 'C';
+} else {
+  grade = 'F';
+}
+
+console.log(`Your grade is ${grade}`);
+```
+-----------------------------------------------------------------------------------------------
+### Q3. What are loops, and why do we need them? Explain different types of loops with their syntax and examples.
+
+Loops are used to execute a block of code repeatedly until a specified condition is met. They are essential for tasks that require repetitive actions, such as iterating over arrays or generating sequences of numbers.
+
+**Types of loops:**
+
+1. **For Loop:**
+   **Syntax:**
+   ```javascript
+   for (initialization; condition; increment/decrement) {
+     // code to be executed
+   }
+   ```
+   **Example:**
+   ```javascript
+   for (let i = 0; i < 5; i++) {
+     console.log(i);
+   }
+   ```
+
+2. **While Loop:**
+   **Syntax:**
+   ```javascript
+   while (condition) {
+     // code to be executed
+   }
+   ```
+   **Example:**
+   ```javascript
+   let i = 0;
+   while (i < 5) {
+     console.log(i);
+     i++;
+   }
+   ```
+
+3. **Do-While Loop:**
+   **Syntax:**
+   ```javascript
+   do {
+     // code to be executed
+   } while (condition);
+   ```
+   **Example:**
+   ```javascript
+   let i = 0;
+   do {
+     console.log(i);
+     i++;
+   } while (i < 5);
+   ```
+
+### Q4. Generate numbers between any 2 given numbers.
+
+```javascript
+const num1 = 10;
+const num2 = 25;
+
+for (let i = num1 + 1; i <= num2; i++) {
+  console.log(i);
+}
+```
+
+### Q5. Use the while loop to print numbers from 1 to 25 in ascending and descending order.
+
+**Ascending Order:**
+```javascript
+let i = 1;
+while (i <= 25) {
+  console.log(i);
+  i++;
+}
+```
+
+**Descending Order:**
+```javascript
+let j = 25;
+while (j >= 1) {
+  console.log(j);
+  j--;
+}
+```

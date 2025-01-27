@@ -1,0 +1,101 @@
+### Q1. Write a JavaScript function called outerFunction that takes a parameter and returns an inner function. The inner function should access both the parameter of outerFunction and a variable declared within outerFunction. Demonstrate how lexical scoping allows the inner function to maintain access to these variables even after outerFunction has finished executing.
+
+```javascript
+
+
+function outerFunction(outerParam) {
+    let outerVar = "I am an outer variable";
+
+    return function innerFunction() {
+        console.log(outerParam);
+        console.log(outerVar);
+    };
+}
+
+const inner = outerFunction("I am an outer parameter");
+inner(); // Demonstrates lexical scoping
+```
+
+### Q2. Create a JavaScript program that demonstrates the basic usage of regular expressions. Write a function that takes a regex pattern and a string as input and returns true if there is a match, and false otherwise. Test the function with various patterns and strings.
+
+```javascript
+
+
+function regexTest(pattern, str) {
+    const regex = new RegExp(pattern);
+    return regex.test(str);
+}
+
+console.log(regexTest("\\d+", "123abc")); // true
+console.log(regexTest("\\d+", "abc"));    // false
+console.log(regexTest("hello", "hello world")); // true
+console.log(regexTest("bye", "hello world"));  // false
+```
+
+### Q3. Write a JavaScript program that demonstrates the use of character classes in regular expressions. Create a function that searches for specific character classes in a given string and returns the matches. Test the function with patterns for digits, uppercase letters, lowercase letters, and special characters.
+
+```javascript
+
+
+function findMatches(pattern, str) {
+    const regex = new RegExp(pattern, 'g');
+    return str.match(regex);
+}
+
+console.log(findMatches("\\d", "abc123")); // ["1", "2", "3"]
+console.log(findMatches("[A-Z]", "aBcDeF")); // ["B", "D", "F"]
+console.log(findMatches("[a-z]", "aBcDeF")); // ["a", "c", "e"]
+console.log(findMatches("\\W", "hello@world!")); // ["@", "!"]
+```
+
+### Q4. Create a JavaScript program that takes a regex pattern and a string as input. Write a function that not only checks if there is a match but also extracts specific parts of the matched text using groups. Test the function with patterns that include groups to capture different parts of a date (e.g., day, month, and year) from a given string.
+
+```javascript
+
+
+function extractDate(pattern, str) {
+    const regex = new RegExp(pattern);
+    const match = str.match(regex);
+    if (match) {
+        return {
+            day: match[1],
+            month: match[2],
+            year: match[3]
+        };
+    }
+    return null;
+}
+
+const datePattern = "(\\d{2})-(\\d{2})-(\\d{4})";
+const dateString = "Today's date is 15-08-2023.";
+console.log(extractDate(datePattern, dateString)); // { day: "15", month: "08", year: "2023" }
+```
+
+### Q5. You are building a shipping application. Write a program that takes the type of package ("standard", "express", or "overnight") and uses a switch statement to calculate and print the estimated delivery time based on the package type. For example, "standard" might take 3-5 days, "express" 1-2 days, and "overnight" would be delivered the next day.
+
+```javascript
+
+
+function getDeliveryTime(packageType) {
+    let deliveryTime;
+    switch (packageType) {
+        case "standard":
+            deliveryTime = "3-5 days";
+            break;
+        case "express":
+            deliveryTime = "1-2 days";
+            break;
+        case "overnight":
+            deliveryTime = "next day";
+            break;
+        default:
+            deliveryTime = "unknown package type";
+    }
+    console.log(`Estimated delivery time: ${deliveryTime}`);
+}
+
+getDeliveryTime("standard");  // Estimated delivery time: 3-5 days
+getDeliveryTime("express");   // Estimated delivery time: 1-2 days
+getDeliveryTime("overnight"); // Estimated delivery time: next day
+getDeliveryTime("same-day");  // Estimated delivery time: unknown package type
+```
