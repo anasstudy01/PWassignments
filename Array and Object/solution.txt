@@ -1,0 +1,157 @@
+Answer 1:
+
+const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+
+shoppingCart.unshift("meat")
+console.log(shoppingCart)
+
+shoppingCart.push("sugar")
+console.log(shoppingCart)
+
+shoppingCart[3]="green tea"
+console.log(shoppingCart)
+
+
+// Remove 'Honey' from the array
+const honeyIndex = shoppingCart.indexOf("Honey")
+// if (honeyIndex !== -1) {
+//     shoppingCart.splice(honeyIndex, 1)
+// }
+// console.log(shoppingCart)
+console.log(honeyIndex)
+shoppingCart.splice(4,1);
+console.log(shoppingCart)
+
+
+
+answer 2: 
+
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+
+// Sort the array
+const sortedAges = [...ages].sort((a, b) => a - b);
+console.log("Sorted ages:", sortedAges);
+
+// Find min and max age
+const minAge = sortedAges[0];
+const maxAge = sortedAges[sortedAges.length - 1];
+console.log("Min age:", minAge);
+console.log("Max age:", maxAge);
+
+// Find median age
+let medianAge;
+const mid = Math.floor(sortedAges.length / 2);
+if (sortedAges.length % 2 === 0) {
+    medianAge = (sortedAges[mid - 1] + sortedAges[mid]) / 2;
+} else {
+    medianAge = sortedAges[mid];
+}
+console.log("Median age:", medianAge);
+
+// Find average age
+const averageAge = ages.reduce((sum, age) => sum + age, 0) / ages.length;
+console.log("Average age:", averageAge);
+
+// Find range of ages
+const range = maxAge - minAge;
+console.log("Range:", range);
+
+// Compare (min - average) and (max - average)
+const minDiff = Math.abs(minAge - averageAge);
+const maxDiff = Math.abs(maxAge - averageAge);
+console.log("Min - Average:", minDiff);
+console.log("Max - Average:", maxDiff);
+
+
+answer 3:
+const student = { name: "John", age: 20 };
+
+// a) Prevent extensions
+Object.preventExtensions(student);
+
+// b) Check extensibility
+const extensibleStatus = Object.isExtensible(student);
+
+// c) Create teacher object
+const teacher = { subject: "Math" };
+
+// d) Seal teacher object
+Object.seal(teacher);
+
+// e) Check if teacher is sealed
+const sealedStatus = Object.isSealed(teacher);
+
+// f) Print statuses
+console.log("Student extensible:", extensibleStatus);
+console.log("Teacher sealed:", sealedStatus);
+
+
+
+answer 4
+let students = [
+    { id: 1, firstName: "Alice", lastName: "Smith", age: 20, grade: "A" },
+    { id: 2, firstName: "Bob", lastName: "Brown", age: 22, grade: "B" },
+    { id: 3, firstName: "Charlie", lastName: "Davis", age: 21, grade: "A" }
+];
+
+// a. Add a Student
+function addStudent(student) {
+    students.push(student);
+}
+
+// b. Update Student Information
+function updateStudent(id, updatedInfo) {
+    const index = students.findIndex(s => s.id === id);
+    if (index !== -1) {
+        students[index] = { ...students[index], ...updatedInfo };
+    }
+}
+
+// c. Delete a Student
+function deleteStudent(id) {
+    students = students.filter(s => s.id !== id);
+}
+
+// d. List All Students
+function listAllStudents() {
+    console.log(students);
+}
+
+// e. Find Students by Grade
+function findStudentsByGrade(grade) {
+    return students.filter(s => s.grade === grade);
+}
+
+// f. Calculate Average Age
+function calculateAverageAge() {
+    return students.reduce((sum, s) => sum + s.age, 0) / students.length;
+}
+
+// Example usage:
+addStudent({ id: 4, firstName: "David", lastName: "Evans", age: 23, grade: "C" });
+updateStudent(2, { age: 23, grade: "A" });
+deleteStudent(1);
+listAllStudents();
+console.log(findStudentsByGrade("A"));
+console.log("Average age:", calculateAverageAge());
+
+
+answer 5:
+solution
+
+const student = {
+    name: "Alice",
+    age: 22,
+    major: "Computer Science",
+    GPA: 3.8,
+    isEnrolled: true
+};
+
+function displayStudentInfo(studentObj) {
+    for (const property in studentObj) {
+        console.log(`Property: ${property}, Value: ${studentObj[property]}`);
+    }
+}
+
+// Call the function with the student object
+displayStudentInfo(student);
