@@ -1,0 +1,83 @@
+,A What is SEO and explain the importance of SEO)
+#A Create an HTML document with appropriate <title> and <meta> tags for SEO optimization. Ensure the title
+is descriptive and the meta description is conciseA
+A What are the Benefits of Using meta tag5
+A Create an HTML document that properly incorporates semantic elements like <header>, <article>,
+<section>, or <nav> to improve SEO and document structureA
+-A Define Favicon and give an illustrative example.
+
+. What is SEO and explain the importance of SEO?
+
+SEO (Search Engine Optimization) is the process of optimizing a website to improve its visibility in search engine results. The importance of SEO lies in increasing organic (non-paid) traffic, enhancing user experience, and helping websites rank higher, which can lead to more visitors and potential customers.
+
+2. Create an HTML document with appropriate <title> and <meta> tags for SEO optimization. Ensure the title is descriptive and the meta description is concise.
+<!-- Example SEO-optimized HTML head -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PhysicsWallah: Quality Online Education for All</title>
+  <meta name="description" content="PhysicsWallah offers high-quality online courses and resources for students preparing for competitive exams.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <!-- Page content -->
+</body>
+</html>
+
+3. What are the Benefits of Using meta tags?
+
+Improve search engine ranking and visibility.
+Provide concise summaries for search results.
+Control how web pages are displayed on social media.
+Specify character encoding and viewport settings for better accessibility and responsiveness.
+4. Create an HTML document that properly incorporates semantic elements like <header>, <article>, <section>, or <nav> to improve SEO and document structure.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PhysicsWallah: Online Learning Platform</title>
+  <meta name="description" content="Learn with PhysicsWallah using structured courses and expert guidance.">
+</head>
+<body>
+  <header>
+    <h1>PhysicsWallah</h1>
+    <nav>
+      <a href="#courses">Courses</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+  <main>
+    <section id="courses">
+      <h2>Our Courses</h2>
+      <article>
+        <h3>JEE Preparation</h3>
+        <p>Comprehensive resources for JEE aspirants.</p>
+      </article>
+      <article>
+        <h3>NEET Preparation</h3>
+        <p>Expert guidance for NEET exams.</p>
+      </article>
+    </section>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>PhysicsWallah is dedicated to affordable education.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 PhysicsWallah</p>
+  </footer>
+</body>
+</html>
+
+
+5. Define Favicon and give an illustrative example.
+
+A favicon (short for "favorite icon") is a small icon displayed in the browser tab, bookmarks, and address bar, representing a website.
+
+Example:
+<head>
+  <!-- ...other head elements... -->
+  <link rel="icon" type="image/png" href="https://www.example.com/favicon.png">
+</head>
+
+Let me know if you need these answers in a specific format!
