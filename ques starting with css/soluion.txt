@@ -1,0 +1,152 @@
+solution 1:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CSS Priority Demo</title>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Internal CSS -->
+  <style>
+    /* Internal CSS */
+    .my-div {
+      background-color: lightblue; /* This will be overridden by inline CSS */
+      color: navy;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Inline CSS has the highest priority -->
+  <div class="my-div" style="background-color: yellow; border: 2px solid red;">
+    This div demonstrates CSS priority.<br>
+    Inline > Internal > External
+  </div>
+  <!--
+    Comments:
+    - Inline CSS (style="...") overrides internal and external CSS.
+    - Internal CSS (in <style> tag) overrides external CSS.
+    - External CSS (in separate .css file) has the lowest priority.
+  -->
+</body>
+</html>
+
+styles.css (external CSS):
+
+.my-div {
+  background-color: pink;
+  color: green;
+}
+
+2. Multiple Paragraphs with Unique Classes (BEM Naming Convention)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BEM Paragraphs Example</title>
+  <style>
+    /* BEM: Block__Element--Modifier */
+    .para-list__item--intro {
+      color: #2a9d8f;
+      font-weight: bold;
+    }
+    .para-list__item--main {
+      color: #e76f51;
+      font-style: italic;
+    }
+    .para-list__item--conclusion {
+      color: #264653;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <p class="para-list__item--intro">This is the introduction paragraph.</p>
+  <p class="para-list__item--main">This is the main content paragraph.</p>
+  <p class="para-list__item--conclusion">This is the conclusion paragraph.</p>
+  <!--
+    BEM Explanation:
+    - Block: para-list
+    - Element: item
+    - Modifier: intro, main, conclusion
+    This helps keep class names meaningful and organized.
+  -->
+</body>
+</html>
+
+ question 3 Styled HTML Form with Custom Palette and Opacity
+
+soluion 3:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Styled Form Example</title>
+  <style>
+    :root {
+      --primary: #4f8a8b;
+      --secondary: #fbd46d;
+      --accent: #f67280;
+      --bg: #fff;
+    }
+    body {
+      background: var(--bg);
+      font-family: Arial, sans-serif;
+    }
+    .custom-form {
+      background: var(--primary);
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      margin: 30px auto;
+      color: #fff;
+    }
+    .custom-form input,
+    .custom-form select {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      background: var(--secondary);
+      color: #333;
+    }
+    .custom-form__section--faded {
+      opacity: 0.5; /* Demonstrates opacity */
+    }
+    .custom-form button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <form class="custom-form">
+    <div>
+      <label>Name: <input type="text" name="name"></label>
+    </div>
+    <div>
+      <label>Email: <input type="email" name="email"></label>
+    </div>
+    <div class="custom-form__section--faded">
+      <label>Favorite Color:
+        <select name="color">
+          <option>Red</option>
+          <option>Blue</option>
+          <option>Green</option>
+        </select>
+      </label>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  <!--
+    - Custom color palette is defined using CSS variables.
+    - Opacity is applied to one section for demonstration.
+  -->
+</body>
+</html>
