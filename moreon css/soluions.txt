@@ -1,0 +1,348 @@
+1. Navigation Bar with Hover Effect
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        nav {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Blog</a>
+        <a href="#">Login</a>
+    </nav>
+</body>
+</html>
+2. Centered Div with Image and Paragraph
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .container img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .container p {
+            text-align: center;
+            line-height: 1.6;
+        }
+        .contact {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="profile.jpg" alt="Profile Image">
+        <h2>Edit Attendance Program</h2>
+        <p>Full stack Web Development</p>
+        <p>Course Name: PW Skills full stack web development</p>
+        <div class="contact">
+            <strong>Call</strong>
+            <span>+127.00.1:5303/2.html</span>
+        </div>
+    </div>
+</body>
+</html>
+3. Navigation Bar with Different Border Styles
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        nav {
+            background-color: #f8f9fa;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 10px 15px;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        #home {
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+        }
+        #about {
+            border: 2px dashed #2196F3;
+        }
+        #contact {
+            border: 2px dotted #ff9800;
+        }
+        #blog {
+            border: 2px double #9c27b0;
+        }
+        #login {
+            border: 2px groove #f44336;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" id="home">Home</a>
+        <a href="#" id="about">About Us</a>
+        <a href="#" id="contact">Contact</a>
+        <a href="#" id="blog">Blog</a>
+        <a href="#" id="login">Login</a>
+    </nav>
+</body>
+</html>
+4. Circular Image using Border-Radius
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .circular-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <img src="profile.jpg" alt="Circular Profile Image" class="circular-image">
+</body>
+</html>
+5. Blog About Google Fonts
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+            color: #333;
+        }
+        .google-fonts-img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+        p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>Google Fonts</h1>
+    <img src="google-fonts.jpg" alt="Google Fonts" class="google-fonts-img">
+    <p>
+        Google Fonts is a library of free licensed font families, an interactive web directory for browsing the library, 
+        and APIs for conveniently using the fonts via CSS and Android. Launched in 2010, Google Fonts has become 
+        one of the most popular resources for web typography. The service hosts over 1,000 font families which are 
+        available for free use on websites. All fonts are open source and can be used commercially. Google Fonts 
+        makes it easy to bring personality and performance to your websites and products with a collection of 
+        beautiful, professionally designed fonts optimized for the web.
+    </p>
+</body>
+</html>
+6. PW Skills About Us Page
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .mission {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .course {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="pw-skills-logo.png" alt="PW Skills Logo" class="logo">
+    </header>
+    
+    <section class="mission">
+        <h1>About Us</h1>
+        <p>
+            PW Skills mission is to permeate through every student/professional's outlook towards jobs and change their 
+            attitude and perspective from "How Can I Do It?" to "Of Course I Can Do It". We aim to do this by providing 
+            exceptional up-skilling courses at affordable rates, while being tech-forward so anyone, anywhere can access 
+            and improve their ability to be successful in life.
+        </p>
+    </section>
+    
+    <div class="course">Full Stack Web Development</div>
+</body>
+</html>
+7. Semi-Transparent Card with Hover Effect
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .card {
+            width: 300px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .card:hover {
+            opacity: 1;
+        }
+        .card h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>WEB DEVELOPMENT</h2>
+        <p>Course Name: PW SKills web development</p>
+    </div>
+</body>
+</html>
+8. Requirements List
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        li:before {
+            content: "•";
+            color: #4CAF50;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .course {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Requirements</h1>
+    <ul>
+        <li>System with minimum i3 processor or better.</li>
+        <li>At least 4 GB of RAM.</li>
+        <li>Working internet connection.</li>
+        <li>Dedication to learn</li>
+    </ul>
+    
+    <div class="course">Full Stack Web Development</div>
+</body>
+</html>
