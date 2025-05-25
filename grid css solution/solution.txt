@@ -1,0 +1,122 @@
+Task 1: Image Gallery Using CSS Grid
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <img src="image1.jpg" alt="Image 1">
+    <img src="image2.jpg" alt="Image 2">
+    <img src="image3.jpg" alt="Image 3">
+    <!-- Add more images -->
+  </div>
+</body>
+</html>
+Task 2: Arrange Containers A, B, C, D
+Assumed Layout:
+A 2x2 grid where:
+
+A occupies the first column
+
+B and C share the second column
+
+D spans the entire bottom row
+
+css
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  gap: 10px;
+}
+
+.A { grid-row: 1 / 3; } /* Span both rows */
+.B { grid-column: 2; }
+.C { grid-column: 2; }
+.D { grid-column: 1 / 3; } /* Span both columns */
+Task 3: grid-auto-row and grid-auto-column
+Explanation:
+
+grid-auto-rows: Defines the height of implicitly created rows (rows not explicitly defined in grid-template-rows)
+
+grid-auto-columns: Defines the width of implicitly created columns
+
+Example:
+
+css
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-auto-rows: 50px; /* All new rows will be 50px tall */
+  grid-auto-columns: 80px; /* New columns will be 80px wide */
+}
+Task 4: Number Arrangement
+Given HTML:
+
+html
+<div class="container">
+  <div class="box box1">1</div>
+  <div class="box box2">2</div>
+  <div class="box box3">3</div>
+  <div class="box box4">4</div>
+  <div class="box box5">5</div>
+  <div class="box box6">6</div>
+  <div class="box box7">7</div>
+  <div class="box box8">8</div>
+</div>
+CSS Solution:
+
+css
+.container {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+}
+
+.box1 { grid-row: 2; grid-column: 1; }
+.box2 { grid-row: 2; grid-column: 2; }
+.box3 { grid-row: 1; grid-column: 1; }
+.box4 { grid-row: 1; grid-column: 2; }
+.box5 { grid-row: 1; grid-column: 3; }
+.box6 { grid-row: 1; grid-column: 4; }
+.box7 { grid-row: 1; grid-column: 5; }
+.box8 { grid-row: 1; grid-column: 6; }
+Task 5: justify-items vs justify-self
+justify-items
+
+Applies to the grid container
+
+Aligns all grid items along the inline (row) axis within their cells
+
+css
+.container {
+  justify-items: center; /* All items centered horizontally */
+}
+justify-self
+
+Applies to individual grid items
+
+Overrides justify-items for specific items
+
+css
+.special-item {
+  justify-self: start; /* Aligns this item to the left */
+}
