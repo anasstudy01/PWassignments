@@ -1,0 +1,264 @@
+Q1: Differences between Flexbox and Grid
+Main Differences:
+
+Flexbox is one-dimensional (works in either rows or columns), while Grid is two-dimensional (handles rows and columns simultaneously).
+
+Flexbox is ideal for laying out items in a single direction (like navigation bars or small components), while Grid is better for complex page layouts.
+
+Flexbox works from the content out (items dictate layout), while Grid works from the layout in (you define the structure first).
+
+When to use each:
+
+Use Flexbox for:
+
+Small-scale layouts
+
+Components that need to align in one direction
+
+Distributing space within a container
+
+Use Grid for:
+
+Complex page layouts
+
+Two-dimensional designs
+
+Precise control over both rows and columns
+
+Q2: Key Flexbox Properties
+justify-content: Controls alignment along the main axis (horizontal by default). Values include flex-start, flex-end, center, space-between, space-around.
+
+align-items: Controls alignment along the cross axis (vertical by default). Values include flex-start, flex-end, center, baseline, stretch.
+
+gap: Sets the spacing between flex items (replaces the need for margins between items).
+
+flex-direction: Defines the main axis direction (row, row-reverse, column, column-reverse).
+
+flex-wrap: Determines if items should wrap to new lines when they don't fit (nowrap, wrap, wrap-reverse).
+
+Q3: Centering a div with Flexbox
+css
+.container {
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center;    /* vertical centering */
+  height: 100vh;          /* full viewport height */
+}
+html
+<div class="container">
+  <div>Centered Content</div>
+</div>
+Q4: Pricing Section Solution
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Plans</title>
+  <style>
+    .pricing-section {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+      font-family: Arial, sans-serif;
+    }
+    
+    .plan {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .plan h3 {
+      color: #333;
+      margin-top: 0;
+    }
+    
+    .price {
+      font-size: 2em;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    
+    .features {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      margin: 20px 0;
+    }
+    
+    .features li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1em;
+    }
+    
+    .btn:hover {
+      background-color: #45a049;
+    }
+    
+    .pro-plan {
+      border: 2px solid #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <div class="pricing-section">
+    <div class="plan">
+      <h3>Free Plan</h3>
+      <p>For personal</p>
+      <div class="price">$0</div>
+      <ul class="features">
+        <li>1 users</li>
+        <li>4 Web mails</li>
+        <li>Responsive Website</li>
+        <li>Free SSL</li>
+      </ul>
+      <button class="btn">Subscribe now</button>
+    </div>
+    
+    <div class="plan">
+      <h3>Basic Plan</h3>
+      <p>For small business</p>
+      <div class="price">$29</div>
+      <ul class="features">
+        <li>4 users</li>
+        <li>10 Web mails</li>
+        <li>Responsive Website</li>
+        <li>Free SSL</li>
+      </ul>
+      <button class="btn">Subscribe now</button>
+    </div>
+    
+    <div class="plan pro-plan">
+      <h3>Pro Plan</h3>
+      <p>For enterprise</p>
+      <div class="price">$49</div>
+      <ul class="features">
+        <li>Unlimited users</li>
+        <li>Unlimited Web mails</li>
+        <li>Responsive Website</li>
+        <li>Free SSL + SEO</li>
+      </ul>
+      <button class="btn">Subscribe now</button>
+    </div>
+  </div>
+</body>
+</html>
+Q5: IRCTC Ticket Booking Page (Conceptual Solution)
+
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRCTC Ticket Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    header {
+      background-color: #006747;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    
+    .booking-container {
+      display: flex;
+      flex-direction: column;
+      max-width: 800px;
+      margin: 20px auto;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    
+    .ticket-option {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .search-btn {
+      background-color: #006747;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Indian Railways</h1>
+    <p>Safety Security | Punctuality</p>
+  </header>
+  
+  <div class="booking-container">
+    <div class="ticket-option">
+      <div>
+        <h3>RICK Ticket</h3>
+        <p>FOR $4min</p>
+        <p>Charts / Victims</p>
+      </div>
+    </div>
+    
+    <div class="ticket-option">
+      <div>
+        <h3>From Bangalore</h3>
+        <p>KSR - Bangalore</p>
+      </div>
+      <div>
+        <h3>To Kasaragod</h3>
+        <p>KBD - Kasaragod</p>
+      </div>
+    </div>
+    
+    <div class="ticket-option">
+      <div>
+        <h3>01 Aug 23</h3>
+        <p>Tuesday</p>
+      </div>
+      <div>
+        <p>Class 3A</p>
+        <p>ACI 3 tier</p>
+      </div>
+      <div>
+        <p>BG</p>
+        <p>Seat Type v</p>
+      </div>
+      <div>
+        <p>BG TATKAL</p>
+        <p>ACI 3 Tier</p>
+      </div>
+    </div>
+    
+    <button class="search-btn">Search Train</button>
+  </div>
+</body>
+</html>
