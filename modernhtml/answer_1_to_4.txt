@@ -1,0 +1,72 @@
+1. Features of HTML6 (Potential/Expected)
+HTML6 hasn't been officially released yet (as of 2023), but based on discussions and proposals, here are potential features:
+
+Native Web Components - Better support for custom elements without JavaScript frameworks
+
+Improved Multimedia Controls - Enhanced video/audio APIs and built-in editing capabilities
+
+Advanced Form Controls - More sophisticated input types and validation
+
+Built-in Dark Mode Support - Native handling of color schemes
+
+Enhanced Security Features - Stronger default security protocols
+
+Better Accessibility Integration - More semantic elements and ARIA roles built-in
+
+Improved Performance - Native lazy loading for all resources
+
+3D/AR/VR Support - Built-in support for immersive technologies
+
+Simplified Syntax - Optional closing tags for certain elements
+
+Native State Management - Built-in state handling without JavaScript
+
+2. HTML Entities (5 Commonly Used)
+HTML entities are codes used to represent characters that have special meaning in HTML or that can't be easily typed on a keyboard.
+
+Common HTML entities:
+
+&lt; - < (less than)
+
+&gt; - > (greater than)
+
+&amp; - & (ampersand)
+
+&nbsp; - Non-breaking space
+
+&copy; - © (copyright symbol)
+
+3. Web Accessibility
+Definition: Web accessibility means designing and developing websites that can be used by all people, regardless of disabilities or impairments.
+
+Why it's essential:
+
+Legal requirements - Many countries have laws mandating accessibility
+
+Inclusivity - Ensures equal access to information for everyone
+
+Business benefits - Expands potential audience/customer base
+
+SEO benefits - Accessible sites often rank better in search engines
+
+Future-proofing - Benefits aging populations and temporary impairments
+
+Benefits for different user groups:
+
+Visual impairments: Screen reader compatibility, proper contrast
+
+Motor impairments: Keyboard navigation, large click targets
+
+Cognitive disabilities: Clear content structure, simple language
+
+Hearing impairments: Captions for audio/video content
+
+4. 3 Ways to Improve HTML Accessibility
+Use Semantic HTML: Properly structured content with elements like <header>, <nav>, <main>, <article>, <footer>
+
+Add ARIA Attributes: Use ARIA roles and properties where needed (e.g., aria-label, role="navigation")
+
+Ensure Keyboard Navigation: All interactive elements should be focusable and usable with keyboard alone
+
+
+
